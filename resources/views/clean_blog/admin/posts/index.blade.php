@@ -13,14 +13,14 @@
 <div class="container-fluid">
 <div class="row">
     <div class="col-12">
-        @if (session('success'))
+        {{-- @if (session('success'))
             <div class="alert alert-{{ session('type') }} alert-dismissible fade show">
                 {{ session('success') }}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
             </div>
-        @endif
+        @endif --}}
 
         @section('script')
             <script>

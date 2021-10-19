@@ -4,21 +4,26 @@
       <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
 
-           <li class="nav-item">
+
+           @if (auth()->user()->user_type == 'admin')
+                <li class="nav-item">
             <a href="{{route('dashboard')}}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+                <i class="fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
+           @endif
+
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fas fa-address-card"></i>
           <p>
             Posts
             <i class="right fas fa-angle-left"></i>
+
           </p>
         </a>
         <ul class="nav nav-treeview">
@@ -39,7 +44,7 @@
 
       <li class="nav-item">
         <a href="#" class="nav-link">
-          <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="far fa-list-alt"></i>
           <p>
             Categories
             <i class="right fas fa-angle-left"></i>
@@ -65,7 +70,7 @@
             <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();" class="nav-link">
-               
+
               <i class="fas fa-sign-out-alt"></i>
               <p>
                 Logout
